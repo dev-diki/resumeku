@@ -1,0 +1,130 @@
+a:hover {
+  color: #ffb400;
+}
+
+.section-heading h1::before {
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.4) 0%, rgba(255, 180, 0, 0.01) 100%);
+}
+
+.text-base {
+  color: #ffb400;
+}
+
+.btn {
+  border: 2px solid #ffb400;
+}
+
+.btn:hover {
+  color: #ffb400;
+}
+
+.btn-main {
+  background-color: #ffb400;
+}
+
+.loading .circle {
+  background-color: #ffb400;
+}
+
+.author-img::before {
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.4) 0%, rgba(255, 180, 0, 0.01) 100%);
+}
+
+.navbar-brand {
+  color: #ffb400;
+}
+
+.navbar .navbar-toggler .line {
+  background-color: #ffb400;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #ffb400;
+}
+
+.navbar-nav .nav-link:hover:after, .navbar-nav .nav-link.active:after {
+  background-color: #ffb400;
+}
+
+.social-links li a:hover i {
+  color: #ffb400;
+}
+
+.hero .hero-caption .name span {
+  color: #ffb400;
+}
+
+.hero .hero-caption .job .typewrite {
+  color: #ffb400;
+}
+
+.hero .social-links a {
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.4) 0%, rgba(255, 180, 0, 0.01) 100%);
+}
+
+.hero .social-links a i {
+  color: #ffb400;
+}
+
+.about .about-img:before {
+  border: 10px solid rgba(255, 180, 0, 0.4);
+}
+
+.about .content h3 .typewrite {
+  color: #ffb400;
+}
+
+.services .service-box .service-icon {
+  background: linear-gradient(135deg, rgba(255, 180, 0, 0.4) 0%, rgba(255, 180, 0, 0.01) 100%);
+}
+
+.services .service-box .service-icon i {
+  color: #ffb400;
+}
+
+.services .service-box:hover:after {
+  background-color: #ffb400;
+}
+
+.portfolio .filters li.active {
+  color: #ffb400;
+}
+
+.portfolio .portfolio-item .overly p {
+  color: #ffb400;
+}
+
+.carousel-inner .carousel-item .icon i {
+  color: #ffb400;
+}
+
+.carousel-inner .carousel-item .name {
+  color: #ffb400;
+}
+
+.blog .blog-item .content .title:hover {
+  color: #ffb400;
+}
+
+.contact .contact-info li span i {
+  color: #ffb400;
+}
+
+.contact .contact__form .form-control {
+  border: 0.5px solid rgba(255, 180, 0, 0.1);
+}
+
+.contact .contact__form .form-control:focus {
+  -webkit-box-shadow: 0 0 8px 4px rgba(255, 180, 0, 0.2);
+          box-shadow: 0 0 8px 4px rgba(255, 180, 0, 0.2);
+}
+
+.footer .back-top {
+  background-color: #ffb400;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar-nav {
+    border-bottom: 1px solid rgba(255, 180, 0, 0.2);
+  }
+}
