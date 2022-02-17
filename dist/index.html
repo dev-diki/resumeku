@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="my resume" />
+    <meta name="keywords" content="resume" />
+    <meta name="author" content="dev-diki" />
+
+    <!--title-->
+    <title>My Resume</title>
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!--font google-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!--bootstrap 4-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--magnific-popup-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!--animate-->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--main css-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--default-color-->
+    <link rel="stylesheet" href="css/color/color-default.css">
+
+    <!-- Style customizer (Remove these two lines) -->
+    <link rel="stylesheet" href="#" data-style="styles" />
+    <link rel="stylesheet" href="css/style-customizer.css" />
+
+</head>
+
+<script>
+	//<![CDATA[
+	shortcut = {
+		all_shortcuts: {},
+		add: function(a, b, c) {
+			var d = {
+				type: "keydown",
+				propagate: !1,
+				disable_in_input: !1,
+				target: document,
+				keycode: !1
+			};
+			if (c)
+				for (var e in d) "undefined" == typeof c[e] && (c[e] = d[e]);
+			else c = d;
+			d = c.target, "string" == typeof c.target && (d = document.getElementById(c.target)), a = a.toLowerCase(), e = function(d) {
+				d = d || window.event;
+				if (c.disable_in_input) {
+					var e;
+					d.target ? e = d.target : d.srcElement && (e = d.srcElement), 3 == e.nodeType && (e = e.parentNode);
+					if ("INPUT" == e.tagName || "TEXTAREA" == e.tagName) return
+				}
+				d.keyCode ? code = d.keyCode : d.which && (code = d.which), e = String.fromCharCode(code).toLowerCase(), 188 == code && (e = ","), 190 == code && (e = ".");
+				var f = a.split("+"),
+					g = 0,
+					h = {
+						"`": "~",
+						1: "!",
+						2: "@",
+						3: "#",
+						4: "$",
+						5: "%",
+						6: "^",
+						7: "&",
+						8: "*",
+						9: "(",
+						0: ")",
+						"-": "_",
+						"=": "+",
+						";": ":",
+						"'": '"',
+						",": "<",
+						".": ">",
+						"/": "?",
+						"\\": "|"
+					},
+					i = {
+						esc: 27,
+						escape: 27,
+						tab: 9,
+						space: 32,
+						"return": 13,
+						enter: 13,
+						backspace: 8,
+						scrolllock: 145,
+						scroll_lock: 145,
+						scroll: 145,
+						capslock: 20,
+						caps_lock: 20,
+						caps: 20,
+						numlock: 144,
+						num_lock: 144,
+						num: 144,
+						pause: 19,
+						"break": 19,
+						insert: 45,
+						home: 36,
+						"delete": 46,
+						end: 35,
+						pageup: 33,
+						page_up: 33,
+						pu: 33,
+						pagedown: 34,
+						page_down: 34,
+						pd: 34,
+						left: 37,
+						up: 38,
+						right: 39,
+						down: 40,
+						f1: 112,
+						f2: 113,
+						f3: 114,
+						f4: 115,
+						f5: 116,
+						f6: 117,
+						f7: 118,
+						f8: 119,
+						f9: 120,
+						f10: 121,
+						f11: 122,
+						f12: 123
+					},
+					j = !1,
+					l = !1,
+					m = !1,
+					n = !1,
+					o = !1,
+					p = !1,
+					q = !1,
+					r = !1;
+				d.ctrlKey && (n = !0), d.shiftKey && (l = !0), d.altKey && (p = !0), d.metaKey && (r = !0);
+				for (var s = 0; k = f[s], s < f.length; s++) "ctrl" == k || "control" == k ? (g++, m = !0) : "shift" == k ? (g++, j = !0) : "alt" == k ? (g++, o = !0) : "meta" == k ? (g++, q = !0) : 1 < k.length ? i[k] == code && g++ : c.keycode ? c.keycode == code && g++ : e == k ? g++ : h[e] && d.shiftKey && (e = h[e], e == k && g++);
+				if (g == f.length && n == m && l == j && p == o && r == q && (b(d), !c.propagate)) return d.cancelBubble = !0, d.returnValue = !1, d.stopPropagation && (d.stopPropagation(), d.preventDefault()), !1
+			}, this.all_shortcuts[a] = {
+				callback: e,
+				target: d,
+				event: c.type
+			}, d.addEventListener ? d.addEventListener(c.type, e, !1) : d.attachEvent ? d.attachEvent("on" + c.type, e) : d["on" + c.type] = e
+		},
+		remove: function(a) {
+			var a = a.toLowerCase(),
+				b = this.all_shortcuts[a];
+			delete this.all_shortcuts[a];
+			if (b) {
+				var a = b.event,
+					c = b.target,
+					b = b.callback;
+				c.detachEvent ? c.detachEvent("on" + a, b) : c.removeEventListener ? c.removeEventListener(a, b, !1) : c["on" + a] = !1
+			}
+		}
+	}, shortcut.add("Ctrl+U", function() {
+		top.location.href = "https://dev-diki.github.io/resumeku"
+	});
+	//]]>
+</script>
+
+<body>
+
+    <!--LOADING-->
+    <div class="loading">
+        <div class="circle"></div>
+    </div>
+
+    <div class="full-page">
+        <!--left-part-->
+        <div class="left-part">
+            <!-- author-img" -->
+            <div class="author-img">
+                <img src="img/img.jpg" alt="">
+            </div>
+            <!--navigation-->
+            <nav class="navbar navbar-expand-sm" id="js-navbar">
+                <!--logo-->
+                <a href="https://dev-diki.github.io/resumeku" class="navbar-brand">
+                    Resume
+                </a>
+                <!-- navbar-toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+    
+                <!--Collapse-->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <!--Links-->
+                    <ul class="navbar-nav liste-unstyle">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+            <!--social-links-->
+            <div class="social-links">
+                <ul class="liste-inline">
+                    <li>
+                        <a href="https://www.facebook.com/dickey.fahrillah/" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/devdiki" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/diki-pahrilah" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dev.diki/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--right-part-->
+        <div class="right-part">
+            <!--HERO-->
+            <div class="hero d-flex align-items-center" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="hero-caption text-center">
+                                <h1 class="name mb-3"> DIKI
+                                    <span>PAHRILAH</span>
+                                </h1>
+                                <h3 class="job mb-4">I am
+                                    <span class="typewrite" data-period="1000" data-type='[ "Web Programmer","Web Developer."," Programmer." ]'></span>
+                                    <span class="wrap"></span>
+                                </h3>
+                                <p class="desc">
+                                    Saat Ini lagi menjemput kerja sebagai Web Developer, Web programmer, dan sebagai Programmer.
+                                </p>
+    
+                                <div class="social-links">
+                                    <ul class="liste-inline">
+                                        <li>
+                                            <a href="https://www.facebook.com/dickey.fahrillah/" target="_blank">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/devdiki" target="_blank">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/diki-pahrilah" target="_blank">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/dev.diki/" target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="scroll-down">
+                                    <a href="#about">
+                                        <i class="fas fa-angle-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--ABOUT-->
+            <div class="about section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 justify-content-items">
+                            <div class="section-heading">
+                                <h1>About Me</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12">
+                            <div class="content ">
+                                <h3 class="mb-3">I'm
+                                    <span class="typewrite" data-period="1000" data-type='[ "Web Programmer","Web Developer."," Programmer." ]'></span>
+                                    <span class="wrap"></span>
+                                </h3>
+                                <p>
+                                    Hi! Nama Saya Diki Pahrilah. Saya adalah seorang Web developer tugas dan tanggung 
+                                    jawab saya yaitu merancang, mengembangkan , memperkaya, menguji, dan meluncurkan aplikasi 
+                                    situs dengan tujuan menciptakan suatu produk yang user-friendly.
+                                </p>
+                                <p>
+                                    Saya menikmati setiap langkah proses, mulai dari diskusi dan kolaborasi secara team
+                                    maupun secara individu.
+                                </p>
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="details">
+                                            <ul class="liste-unstyle">
+                                                <li>
+                                                    <label>Lahir:</label> 1996</li>
+                                                <li>
+                                                    <label>Domisili:</label> Jakarta Selatan.</li>
+                                                <li>
+                                                    <label>Phone:</label> 083100138810</li>
+                                            </ul>
+                                        </div>
+    
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="details">
+                                            <ul class="liste-unstyle">
+                                                <li>
+                                                    <label>Umur:</label> 25 Tahun</li>
+                                                <li>
+                                                    <label>Email:</label>
+                                                    <a href="dikipahrilah@outlook.com">dikipahrilah@outlook.com</a>
+                                                </li>
+                                                <li>
+                                                    <label>Status:</label> Available</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="buttons mt-4">
+                                    <a href="https://dev-diki.github.io/resumeku/data/6039655313bf5dab1e43523b62c374.pdf" target="_blank" class="btn btn-main">Download CV</a>
+                                    <a href="#contact" class="btn btn-dark">Contact me</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="about-img">
+                                <img src="img/me.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--SERVICES-->
+            <div class="services section-padding" id="services">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h1>Our Services</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon  mb-4">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h4 class="mb-2">Web Programmer</h4>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <h4 class="mb-2">Web Developer</h4>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-box ">
+                                <div class="service-icon mb-4">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h4 class="mb-2">Web Development</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--call me-->
+            <div class="section-padding bg-parallex" style="background-image: url('img/background/bg-3.jpg')">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-12 col-xl-9">
+                            <div class="text-center">
+                                <h2 class="mb-4">I'am
+                                    <span class="text-base">Available</span> For Web Developer.
+                                </h2>
+                                <p class="mb-4">Saat ini saya mampu berkomunikasi dengan baik, menggunakan
+                                    aplikasi komputer Microsoft Office, pemrograman dengan , Framework PHP seperti CodeIgniter,
+                                    Laravel, pengolahan database dengan MySQL, PostgreSQL,
+                                    Bahasa pemrograman lainnya yaitu Python (basic), Node.js (basic). serta memahami
+                                    penggunaan git & docker.</p>
+                                <div class="buttons">
+                                    <a href="#contact" class="btn btn-main">Contact me</a>
+                                    <a href="https://dev-diki.github.io/resumeku/data/6039655313bf5dab1e43523b62c374.pdf" target="_blank" class="btn btn-dark">Download cv</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--PORTFOLIO-->
+            <div class="portfolio section-padding " id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h1>our portfolio</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="filters mb-5">
+                                <ul class="liste-inline">
+                                    <li class="filter" data-filter="all">All</li>
+                                    <li class="filter" data-filter=".devlopment">Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner-items">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mix devlopment">
+                                <div class="portfolio-item">
+                                    <a href="img/portfolio/dashboard_pay.png" class="popup-link">
+                                        <img src="img/portfolio/dashboard_pay.png" alt="">
+                                        <div class="overly">
+                                            <p class="mb-0">development project</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mix devlopment">
+                                <div class="portfolio-item">
+                                    <a href="img/portfolio/master_peg.png" class="popup-link">
+                                        <img src="img/portfolio/master_peg.png" alt="">
+                                        <div class="overly">
+                                            <p class="mb-0">development project</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mix devlopment">
+                                <div class="portfolio-item">
+                                    <a href="img/portfolio/hitung_pph21.png" class="popup-link">
+                                        <img src="img/portfolio/hitung_pph21.png" alt="">
+                                        <div class="overly">
+                                            <p class="mb-0">development project</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Testimonials-->
+            <div class="section-padding bg-parallex" style="background-image: url('img/background/bg-3.jpg')">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-12 col-xl-9">
+                            <div class="bd-example">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner text-center">
+                                        <div class="carousel-item active">
+                                            <div class="icon">
+                                                <i class="fas fa-quote-left"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>"Kontribusi yang akan diberikan yaitu
+                                                    Komitmen, Jujur, semangat memotivasi diri,
+                                                    berperilaku positive, minat untuk belajar dan berkembang".</p>
+    
+                                            </div>
+                                            <div class="name">Dev Diki</div>
+    
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="icon">
+                                                <i class="fas fa-quote-left"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>"Mampu bekerja dalam team maupun individu,
+                                                    Selalu bersungguh - sungguh dalam menjalani pekerjaan yang saya lakukan,
+                                                    Selalu ingin belajar dan belajar lagi".</p>
+    
+                                            </div>
+                                            <div class="name">Dev Diki</div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="icon">
+                                                <i class="fas fa-quote-left"></i>
+                                            </div>
+                                            <div class="text">
+                                                <p>"Tetaplah menjadi orang baik, karena orang baik akan dipertemukan dengan orang baik.</p>
+                                            </div>
+                                            <div class="name"> Dev Diki</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--CONTACT-->
+            <div class="contact section-padding" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h1> contact me </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contact-info">
+                                <h5 class="mb-4">GET IN TOUCH</h5>
+                                <ul class="liste-unstyle">
+                                    <li>
+                                        <span>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                        Jl. Makmur No.40, RT.3/RW.3, Kby. Lama Utara, Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12240.</li>
+                                    <li>
+                                        <span>
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                                        <a href="dikipahrilah@outlook.com">dikipahrilah@outlook.com</a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fas fa-phone"></i>
+                                        </span> 083100138810</li>
+                                    <li>
+                                        <span>
+                                            <i class="fab fa-whatsapp"></i>
+                                        </span><a href="https://wa.me/6283100138810" target="_blank">WhatsApp</a></li>
+                                    <li>
+                                        <span>
+                                            <i class="fab fa-github"></i>
+                                        </span><a href="https://github.com/dev-diki/" target="_blank"> GitHub</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="details">
+                                <p class="copyright">
+                                    © Copyright 2022. All Rights are Reserved.
+                                </p>
+                                <a href="#" class="back-top">
+                                    <i class="fas fa-angle-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script src="js/wow.min.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/jquery.mixitup.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/ajax-contact.js"></script>
+    <script src="js/style-customizer.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "my-resume",
+  "version": "1.0.0",
+  "description": "My Resume",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://dev-diki.github.io/resumeku",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
